@@ -1,0 +1,93 @@
+[
+    {
+        "model": "salsa.categories",
+        "pk": 1,
+        "fields": {
+          "category": "category"
+        }
+      },
+    {
+      "model": "salsa.recipes",
+      "pk": 1,
+      "fields": {
+        "title": "recipe title",
+        "tagLine": "recipe tagline",
+        "category": 1,
+        "heat": 4,
+        "output": 3,
+        "difficulty": 2,
+        "prepTime": 1,
+        "html": "recipe html"
+      }
+    },
+    {
+      "model": "salsa.ingredients",
+      "pk": 1,
+      "fields": {
+        "ingredient": "ingredient text"
+      }
+    },
+    {
+        "model": "salsa.ingredients_recipe",
+        "pk": 1,
+        "fields": {
+          "ingredients_id": 1,
+          "recipes_id": 1
+        }
+      },
+    {
+      "model": "salsa.tags",
+      "pk": 1,
+      "fields": {
+        "tag": "tag"
+      }
+    },
+    {
+        "model": "salsa.tags_recipe",
+        "pk": 1,
+        "fields": {
+          "recipes_id": 1,
+          "tags_id": 1
+        }
+      },
+    {
+        "model": "salsa.instructions",
+        "pk": 1,
+        "fields": {
+          "recipe": 1,
+          "instruction": "instruction for recipe",
+          "step": 1
+        }
+      },
+      {
+        "model": "salsa.ingredientstext",
+        "pk": 1,
+        "fields": {
+          "recipe": 1,
+          "text": "ingredients text"
+        }
+      },
+      {
+        "model": "salsa.images",
+        "pk": 1,
+        "fields": {
+            "recipe": 1,
+            "url": "https://www.jocooks.com/wp-content/uploads/2017/07/homemade-salsa-roja-1.jpg",
+            "altTag": "image 1 alt tag",
+            "imageHeight": 500,
+            "imageWidth": 500,
+            "imageType": 1
+        }
+      },
+      {
+        "model": "salsa.images",
+        "pk": 2,
+        "fields": {
+            "ingredient": 1,
+            "url": "https://www.organicfacts.net/wp-content/uploads/storecarrots.jpg",
+            "altTag": "image 1 alt tag",
+            "imageHeight": 500,
+            "imageWidth": 500
+        }
+      }
+  ]

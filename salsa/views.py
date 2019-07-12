@@ -8,8 +8,11 @@ import json
 
 @csrf_exempt
 def create_recipe(request):
-    body = json.loads(request.body)
-    print('this is the print: ', body)
-    new_recipe = Recipes(title = body['title'])
-    new_recipe.save()
-    return HttpResponse('got it')
+    if request.method == 'GET':
+        return HttpResponse('this is a get')
+    if request.method == 'POST':
+        body = json.loads(request.body)
+        print('this is the print: ', body)
+        new_recipe = Recipes(title = body['title'])
+        new_recipe.save()
+        return HttpResponse('got it')
